@@ -1,9 +1,10 @@
 import React from 'react'
+import Todo from './Todo';
 
-const ToDoList = () => {
+const ToDoList = ({todos}) => {
   return (
-    <div>ToDoList</div>
-  )
+    todos.map((todo) => <Todo todo={todo} key={todo} />)
+  );
 }
 
 export default ToDoList
